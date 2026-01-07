@@ -1,21 +1,13 @@
-What to Automate
- Login functionality
- Basic user flows
- Sorting functionality
- Smoke and regression tests
+# What you would automate vs keep manual
 
-What to Keep Manual
- UI look and feel
- Exploratory testing
- Accessibility testing
+I would automate features that are used frequently and are important for the application, such as login, basic user flows, and sorting functionality. These are stable features and are executed repeatedly, so automation helps save time and catch issues early.
 
-Handling Flaky Tests
- Avoid hard waits
- Use Playwright auto-waiting features
- Retry failing tests
- Use screenshots and videos for debugging failures
+I would keep UI look and feel, exploratory testing, and accessibility testing manual. These areas require human observation and judgment, and automation may not always catch visual or usability issues.
 
-Why Playwright Over Selenium
+# Handling Flaky Tests
+To handle flaky tests, I avoid using hard waits and rely on Playwright’s automatic waiting mechanism. I also add retries for tests that may fail due to temporary issues like slow loading. Screenshots and videos on failure help me understand what went wrong and fix the issue quickly.
+
+# Why Playwright Over Selenium
 
 Easier to write and understand test scripts
 Requires less setup compared to Selenium
@@ -27,7 +19,7 @@ Parallel execution is built in
 Screenshots and videos available by default
 Better debugging experience
 
-Scaling for a Real Product
+# Scaling for a Real Product
  Add more page objects as the application grows
  Reuse login logic across tests
  Integrate with CI/CD pipelines
