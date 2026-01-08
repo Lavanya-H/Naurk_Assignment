@@ -11,4 +11,5 @@ test('Inventory page loads products', async ({ page }) => {
   );
 
   await expect(page.locator('.inventory_item')).toHaveCount(6);
+  await page.close()
 });

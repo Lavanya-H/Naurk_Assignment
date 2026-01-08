@@ -11,5 +11,5 @@ test('User cannot access dashboard without login', async ({ page }) => {
     users.invalidCred.password
   );
   await loginPage.isErrorDisplayed()
-
+  await page.close()
 });

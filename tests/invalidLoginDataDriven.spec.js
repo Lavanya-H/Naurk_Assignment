@@ -9,6 +9,7 @@ test.describe('Invalid login tests', () => {
       await loginPage.open();
       await loginPage.login(user.username, user.password);
       await loginPage.isErrorDisplayed()
+      await page.close()
     });
   }
 });

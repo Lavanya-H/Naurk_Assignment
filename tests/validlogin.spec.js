@@ -13,4 +13,5 @@ test('Valid user can login', async ({ page }) => {
   );
 
   await expect(page).toHaveURL(/inventory/);
+  await page.close()
 });
