@@ -1,6 +1,6 @@
 // tests/inventory.spec.js
 const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../pages/LoginPage');
+const { LoginPage } = require('../pages/loginPage');
 const users = require('../test_data/user_Creds.json');
 
 test('Products sorted by price low to high', async ({ page }) => {

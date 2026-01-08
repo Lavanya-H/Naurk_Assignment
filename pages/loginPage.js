@@ -1,4 +1,5 @@
-class LoginPage {
+import { expect } from "@playwright/test";
+exports.LoginPage =class LoginPage {
   constructor(page) {
     this.page = page;
   }
@@ -14,9 +15,8 @@ class LoginPage {
   }
 
   async isErrorDisplayed() {
-    return await this.page.locator('[data-test="error"]').isVisible();
+    await expect(this.page.locator('[data-test="error"]')).toBeVisible();
   }
 }
 
-module.exports = { LoginPage };
 

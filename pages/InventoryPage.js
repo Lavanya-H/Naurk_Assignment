@@ -1,4 +1,4 @@
-class InventoryPage {
+exports.InventoryPage =class InventoryPage {
   constructor(page) {
     this.page = page;
   }
@@ -15,7 +15,5 @@ class InventoryPage {
     return pricesText.map(p => Number(p.replace('$', '')));
   }
 }
-
-module.exports = { InventoryPage };
 
 

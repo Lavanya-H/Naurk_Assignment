@@ -1,7 +1,7 @@
 // tests/login.spec.js
-const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../pages/LoginPage');
-const users = require('../test_data/user_Creds.json');
+import {test,expect} from"@playwright/test"
+import { LoginPage } from '../pages/loginPage'
+import users from '../test_data/user_Creds.json'
 
 test('Valid user can login', async ({ page }) => {
   const loginPage = new LoginPage(page);

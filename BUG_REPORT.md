@@ -16,7 +16,7 @@ Steps:
 Expected: Error message should disappear  
 Actual: Error container still exists  
 Severity: Low
-----------------------
+---------------------------------
 Bug 3: Sorting resets after refresh
 Steps:
 1. Sort products by price

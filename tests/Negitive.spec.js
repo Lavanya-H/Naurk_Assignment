@@ -1,7 +1,15 @@
 // tests/negative.spec.js
 const { test, expect } = require('@playwright/test');
+const { LoginPage } = require('../pages/loginPage');
+import users from "../test_data/user_Creds.json"
 
-test('User cannot access inventory without login', async ({ page }) => {
-  await page.goto('/inventory.html');
-  await expect(page).toHaveURL(/saucedemo.com\/$/);
+test('User cannot access dashboard without login', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  await loginPage.open();
+   await loginPage.login(
+    users.invalidCred.username,
+    users.invalidCred.password
+  );
+  await loginPage.isErrorDisplayed()
+
 });
